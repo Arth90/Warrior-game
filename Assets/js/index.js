@@ -7,7 +7,7 @@
 
 
 const canvasId = 'main-canvas'
-const game = new Game(canvasId); // new Game singnifica se instancia esa clase
+const game = new Game (canvasId); // new Game singnifica se instancia esa clase
 
 
 // el addEventListener siempre tienen 2 argumentos: EL evento y EL evento que se ha producido
@@ -16,8 +16,13 @@ window.addEventListener('keydown', (event) => game.onKeyDown(event));
 window.addEventListener('keyup', (event) => game.onKeyUp(event)); 
 
 
-game.start(); // posteriormente lo asignaré a un botón
+document.getElementById("start-btn").onclick = () => {
+  game.start();
+}
 
+document.getElementById("pause-btn").onclick = () => {
+  game.stop();
+}
 
 
 

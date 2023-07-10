@@ -21,7 +21,7 @@ class Background {
 
     this.sprite = new Image();
     this.sprite.src = "/assets/img/back.png";
-    this.sprite.onload = () => { // Para asegurar que la imagen está descargada y no de bug
+    this.sprite.onload = () => { // Para asegurar que la imagen está descargada
       this.sprite.isReady = true;
     }
   }
